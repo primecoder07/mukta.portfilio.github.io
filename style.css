@@ -1,9 +1,10 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #1d2671, #c33764);
+  background: linear-gradient(-45deg, #1d2671, #c33764, #ff9a9e, #fad0c4);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
   color: white;
-  scroll-behavior: smooth;
 }
 
 nav {
@@ -50,7 +51,8 @@ nav a {
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
 .grid {
@@ -120,4 +122,14 @@ nav a {
 
 .modal img {
   max-width: 80%;
+}
+.section h2 {
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
 }
